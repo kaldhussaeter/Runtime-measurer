@@ -1,0 +1,71 @@
+<!-- A personal project I made in my spare time from work, to use for measuring the actual time
+my machine runs during a day. This to know if the adjustments being made does an increase or decrease
+in average runtime during a week. Per now the company I work for lose a LOT of money
+due to deadtime from crashes, unexpected repairs, adjustments, meetings, etc.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Produksjonsverktoy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="drift.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<header>
+  <div class="topbanner">
+    <h1>Driftstidsmåler</h1>
+  </div>
+  <br>
+  <hr width="90%">
+</header>
+<main>
+  <section>
+    <div class="main-body">
+      Velg maskin:<br>
+      Tid i drift (minutt): <br>
+      Antall produsert:
+      <form>
+      <select id="maskiner">
+       <option value="125T">125T - Diverse</option>
+       <option value="4s5">4S5 - Del 4 S5</option>
+       <option value="3s6">3S6 - Del 3 S6</option>
+     </select><br>
+       <input type="number" id="machine_time"><br>
+       <input type="number" id="number_of_parts">
+       <button type="submit" id="submit_button">Submit</button>
+     </form>
+     <div>
+       <p id="result">
+       </p>
+       <p id="avg-res">
+       </p>
+     </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <p id="average-time">
+        <h2>Gjennomsnitt driftstid siste 10 dager</h2>
+        <ol>
+          <li><b>125T</b> 45%</li>
+          <li><b>3S6</b> 60%</li>
+          <li><b>4S5</b> 79%</li>
+        </ol>
+        </p>
+</section>
+</main>
+<footer>
+  <div class="footer">
+    Developed by Rune Kaldhussæter
+  </div>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>
